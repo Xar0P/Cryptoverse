@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Button,
+  // Button,
   Menu,
   Typography,
   Avatar,
@@ -11,7 +11,7 @@ import {
   MoneyCollectOutlined,
   BulbOutlined,
   FundOutlined,
-  MenuOutlined,
+  // MenuOutlined,
 } from '@ant-design/icons';
 
 import icon from '../../images/cryptocurrency.png';

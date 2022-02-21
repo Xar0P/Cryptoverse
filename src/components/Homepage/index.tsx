@@ -3,7 +3,7 @@ import millify from 'millify';
 import {
   Typography, Row, Col, Statistic,
 } from 'antd';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import { useGetCryptosQuery } from '../../services/cryptoApi';
 
@@ -22,7 +22,7 @@ const Homepage: React.FC = () => {
   const { data, isFetching } = useGetCryptosQuery('');
   const globalStats: GlobalStats = data?.data?.stats;
 
-  console.log(data);
+  // console.log(data);
 
   if (isFetching) return <p>Loading...</p>;
 
