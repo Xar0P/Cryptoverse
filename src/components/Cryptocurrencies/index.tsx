@@ -7,7 +7,7 @@ import {
 
 import { useGetCryptosQuery } from '../../services/cryptoApi';
 
-interface Coin {
+export interface Coin {
   id: number;
   '24hVolume': string,
   btcPrice: string,
