@@ -8,7 +8,7 @@ import {
 import { useGetCryptosQuery } from '../../services/cryptoApi';
 
 export interface Coin {
-  id: number;
+  uuid: number;
   '24hVolume': string,
   btcPrice: string,
   change: string,
@@ -21,7 +21,7 @@ export interface Coin {
   name: string,
   price: string,
   rank: number,
-  tier: number
+  tier: number,
 }
 
 const Cryptocurrencies: React.FC<{ simplified?: boolean }> = ({ simplified }) => {
@@ -29,6 +29,8 @@ const Cryptocurrencies: React.FC<{ simplified?: boolean }> = ({ simplified }) =>
   const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+
+  console.log(cryptosList);
 
   useEffect(() => {
     const filteredData = cryptosList?.data?.coins
@@ -48,8 +50,8 @@ const Cryptocurrencies: React.FC<{ simplified?: boolean }> = ({ simplified }) =>
       )}
       <Row gutter={[32, 32]} className="crypto-card-container">
         {cryptos?.map((currency: Coin) => (
-          <Col xs={24} sm={12} lg={6} className="crypto-card" key={currency.id}>
-            <Link to={`/crypto/${currency.id}`}>
+          <Col xs={24} sm={12} lg={6} className="crypto-card" key={currency.uuid}>
+            <Link to={`/crypto/${currency.uuid}`}>
               <Card
                 title={`${currency.rank}. ${currency.name}`}
                 extra={(
