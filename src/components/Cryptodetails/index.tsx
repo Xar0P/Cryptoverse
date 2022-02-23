@@ -54,7 +54,7 @@ const Cryptodetails: React.FC = () => {
 
   if (isFetching) return <p>Loading...</p>;
 
-  console.log(coinHistory);
+  // console.log(coinHistory)
 
   const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Line } from 'react-chartjs-2';
+// import { Line } from 'react-chartjs-2';
 import { Col, Row, Typography } from 'antd';
 
 const { Title } = Typography;
@@ -17,7 +17,7 @@ const LineChart: React.FC<{
     </Title>
     <Col className="price-container">
       <Title level={5} className="price-change">
-        {/* {coinHistory?.data?.change} */}
+        {coinHistory}
         %
       </Title>
       <Title level={5} className="current-pricec">
